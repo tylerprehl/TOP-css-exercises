@@ -33,7 +33,7 @@ body {
 div.text {
   color: rgb(0, 0, 0);
   font-size: 24px;
-  font-weight: thin;
+  font-weight: 100;
 }
 
 div.child {
