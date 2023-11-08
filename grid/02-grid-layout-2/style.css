@@ -11,6 +11,18 @@ html {
   box-sizing: border-box;
 }
 
+.container {
+  display: grid;
+  text-align: center;
+  height: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  /* old (static) grid-template */
+  /* grid-template: 100px 100px 500px 100px / 300px 900px; */
+  grid-template: 1fr 1fr 5fr 1fr / 1fr 3fr;
+  gap: 15px;
+}
+
 .container div {
   padding: 15px;
   font-size: 32px;
@@ -22,20 +34,32 @@ html {
 
 .header {
   background-color: #006157;
-  grid-column: 1 / 3;
+  grid-area: header;
+  grid-area: 1 / 1 / 1 / 3;
 }
 
 .sidebar {
   background-color: #005B94;
-  grid-row: 2 / 4;
+  grid-area: sidebar;
+  grid-area: 2 / 1 / 4 / 2;
 }
 
 .nav {
   background-color: #642cde;
+  grid-area: navbar;
+  grid-area: 2 / 2 / 3 / 3;
 }
 
 .article {
   background-color: #7E1DC3;
+  grid-area: article;
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.footer {
+  background-color: #393f4d;
+  grid-area: footer;
+  grid-area: 4 / 1 / 5 / 3;
 }
 
 .article p {
@@ -43,9 +67,4 @@ html {
   font-family: sans-serif;
   color: white;
   text-align: left;
-}
-
-.footer {
-  background-color: #393f4d;
-  grid-column: 1 / 3;
 }
